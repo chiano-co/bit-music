@@ -4,21 +4,23 @@
 /* Fuentes */
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Heebo';
+    font-family: 'Heebo' !important;
+    font-weight: 900;
 }
 
  
 /* General */
 body {
-    background-image: url(./assets/img/bg.jpg);
+    background-image: url(./assets/img/bg-def.jpg);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
     overflow-x: hidden;
 }
 
+/* Botones */
 .btn-primary {
-    color: rgb(226, 0, 75);
+    color: rgb(226, 0, 49);
     border: none;
     border-radius: 0;
     background-color: white;
@@ -26,6 +28,44 @@ body {
 
 .btn-primary:hover {
     background-color: black;
+}
+
+.btn-secondary {
+    color: white;
+    border: none;
+    border-radius: 0;
+    background-color: black;
+}
+
+.btn-secondary:hover {
+    color: rgb(226, 0, 49);
+    background-color: rgb(235, 235, 235);
+}
+
+/* Cards */
+.card {
+    border-radius: 0;
+    border: none;
+}
+
+.card-header {
+    background-color: white;
+    border: none;
+}
+
+.card-header h3 {
+    color: rgb(226, 0, 49);
+}
+
+/* Formularios */
+input[type=text], input[type=password], input[type=email] {
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+input[type=text]:active, input[type=password]:active, input[type=email]:active {
+    color: rgb(226, 0, 49);
 }
 
 
