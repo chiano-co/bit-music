@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
-import { MatButtonModule } from '@angular/material/button';
+import {AppRoutingModule} from './app-routing.module';
+import {RouterModule} from '@angular/router';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 import { AppComponent } from './app.component';
 import { ContentIndexComponent } from './componentes/content-index/content-index.component';
 import { FooterComponent } from './componentes/footer/footer.component';
@@ -11,7 +13,6 @@ import { MenuSongComponent } from './componentes/menu-song/menu-song.component';
 import { PlayerComponent } from './componentes/player/player.component';
 import { SongToolsComponent } from './componentes/song-tools/song-tools.component';
 import { UserProfileComponent } from './componentes/user-profile/user-profile.component';
-
 
 @NgModule({
   declarations: [
@@ -26,9 +27,11 @@ import { UserProfileComponent } from './componentes/user-profile/user-profile.co
     UserProfileComponent
   ],
   imports: [
-    AppRoutingModule,
     BrowserModule,
-    MatButtonModule,
+    AppRoutingModule,
+    RouterModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
