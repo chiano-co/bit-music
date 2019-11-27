@@ -1,1 +1,62 @@
-/* You can add global styles to this file, and also import other style files */
+/* Importación de fuente */
+@import url('https://fonts.googleapis.com/css?family=Heebo:400,700,900&display=swap');
+
+/* Fuentes */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Heebo';
+}
+
+ 
+/* General */
+body {
+    background-image: url(./assets/img/bg2.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.btn-primary {
+    color: rgb(226, 0, 75);
+    border: none;
+    border-radius: 0;
+    background-color: white;
+}
+
+
+/* Navbar */
+.navbar {
+    background-color: transparent
+}
+
+.navbar-brand {
+    font-family: 'Heebo';
+    font-size: 75px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.897);
+    letter-spacing: 1px;
+}
+
+.navbar-brand:hover {
+    letter-spacing: 0px;
+    transition: .3s;
+    color: white;
+}
+
+.dot {
+    color: transparent;
+}
+
+.navbar-brand:hover .dot {
+    color: white;
+    transition: .1s;
+}
+
+
+/* Footer */
+footer .navbar {
+    background-color: white;
+    color: rgb(73, 73, 73);
+    font-family: 'Heebo';
+
+}
