@@ -23,6 +23,10 @@ body {
     background-color: white;
 }
 
+.btn-primary:hover {
+    background-color: black;
+}
+
 
 /* Navbar */
 .navbar {
