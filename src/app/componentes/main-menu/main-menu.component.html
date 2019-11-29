@@ -1,17 +1,26 @@
 <div class="container">
-<div class="row mt-3">
-    <div class="col" *ngIf="usuario?.role =='ROLE-ADMIN'">
+    <div class="row mt-3">
         <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-light" (click)="asignarUbicacion('editarCanciones')">Crear Canciones</button>
-            <button type="button" class="btn btn-light" (click)="asignarUbicacion('perfil')">Mi Perfíl</button>
-            <button type="button" class="btn btn-light" (click)="asignarUbicacion('buscar')">Buscar Canciones</button>
+            <button type="button" class="btn btn-light" (click)="asignarBoton('editarCanciones')"
+                *ngIf="usuario?.role =='ROLE-ADMIN'">Crear
+                Canciones</button>
+            <button type="button" class="btn btn-light" (click)="asignarBoton('perfil')">Mi Perfíl</button>
+            <button type="button" class="btn btn-light" (click)="asignarBoton('buscar')">Buscar
+                Canciones</button>
         </div>
     </div>
-    <div class="col" *ngIf="usuario?.role !='ROLE-ADMIN'">
-        <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-light" (click)="asignarUbicacion('perfil')">Mi Perfíl</button>
-            <button type="button" class="btn btn-light" (click)="asignarUbicacion('buscar')">Buscar Canciones</button>
+    <div class="row">
+        <div *ngIf="boton == 'editarCanciones'" class="col-12 col-md-6 ml-auto">
+            <app-song-tools></app-song-tools>
+        </div>
+        <div *ngIf="boton == 'perfil'" class="col-12 col-md-6 ml-auto">
+            <app-user-profile></app-user-profile>
+        </div>
+        <div *ngIf="boton == 'buscar'" class="col-12 col-md-6 ml-auto">
+            <app-menu-song></app-menu-song>
+        </div>
+        <div class="col-12 col-md-6 ml-auto">
+            <app-player></app-player>
         </div>
     </div>
-</div>
 </div>
