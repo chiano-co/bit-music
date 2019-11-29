@@ -1,12 +1,12 @@
 <div class="row mt-3">
-    <div class="col" *ngIf="usuario.role =='ROLE-ADMIN'">
+    <div class="col" *ngIf="usuario?.role =='ROLE-ADMIN'">
         <div class="btn-group" role="group" aria-label="Basic example">
             <button type="button" class="btn btn-light" (click)="asignarUbicacion('editarCanciones')">Crear Canciones</button>
             <button type="button" class="btn btn-light" (click)="asignarUbicacion('perfil')">Mi Perfíl</button>
             <button type="button" class="btn btn-light" (click)="asignarUbicacion('buscar')">Buscar Canciones</button>
         </div>
     </div>
-    <div class="col" *ngIf="usuario.role !='ROLE-ADMIN'">
+    <div class="col" *ngIf="usuario?.role !='ROLE-ADMIN'">
         <div class="btn-group" role="group" aria-label="Basic example">
             <button type="button" class="btn btn-light" (click)="asignarUbicacion('perfil')">Mi Perfíl</button>
             <button type="button" class="btn btn-light" (click)="asignarUbicacion('buscar')">Buscar Canciones</button>
